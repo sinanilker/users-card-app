@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "0001",
+      "userName": "SinanIlker",
+      "email": "sinan@sinan.com",
+      "country": "Turkey"
+    },
+    {
+      "id": "0002",
+      "userName": "Ezgi",
+      "email": "ezgi@ezgi.com",
+      "country": "Germany"
+    },
+    {
+      "id": "0003",
+      "userName": "Fuat",
+      "email": "fuat@fuat.com",
+      "country": "Netherlands"
+    }
+  ]
+}
