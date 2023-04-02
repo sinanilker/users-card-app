@@ -5,6 +5,7 @@ import {useState} from "react";
 import axios from "axios";
 import PropTypes from 'prop-types';
 import Header from "./components/shared/header/Header";
+import UsersForm from "./components/app / users/users-form/UsersForm";
 
 
 function App() {
@@ -25,11 +26,11 @@ function App() {
     const addUser = (event) => {
         event.preventDefault();
         setIsUserValid({...user});
-        if (!(Object.values(user).some(value=> !value))) {
+        if (!(Object.values(user).some(value => !value))) {
             setUser(
                 [
                     // Crypto to use randomized crypted Id for each
-                    ...userList, {Crypto.randomUUID, ...user}
+                    ...userList, {id: crypto.randomUUID(), ...user}
                 ]
             );
             setUser({userName: "", email: "", country: ""});
@@ -41,7 +42,11 @@ function App() {
 
     return (
         <div className="App">
-    <Header />
+            <Header/>
+            <UsersForm user={user}
+                       isUserValid={isUserValid}
+                       updateUserInput={updateUserInput}
+                       addUser={addUser}/>
         </div>
     );
 }
